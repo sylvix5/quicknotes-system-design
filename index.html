@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickNotes Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>QuickNotes</h1>
+            <p class="subtitle">Manage your thoughts securely and efficiently</p>
+        </header>
+
+        <section class="control-section">
+            <button id="load-btn">Load notes</button>
+        </section>
+
+        <p id="status" class="status-message" aria-live="polite"></p>
+
+        <section class="form-section">
+            <h2>Create New Note</h2>
+            <form id="note-form">
+                <div class="field-group">
+                    <label for="title-input">Title (required, max 100 chars):</label>
+                    <input type="text" id="title-input" maxlength="100" required placeholder="Enter note title...">
+                </div>
+                <div class="field-group">
+                    <label for="body-input">Body (optional):</label>
+                    <textarea id="body-input" rows="4" placeholder="Enter your note body..."></textarea>
+                </div>
+                <button type="submit" id="submit-btn">Create Note</button>
+            </form>
+        </section>
+
+        <section class="notes-section">
+            <h2>Notes Feed</h2>
+            <ul id="notes-list"></ul>
+        </section>
+    </main>
+
+    <script src="api.js" defer></script>
+</body>
+</html>
