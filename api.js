@@ -171,7 +171,7 @@ async function createNote(event) {
         setStatus(`Note created (status 201, id ${noteId}).`, 'success');
         noteForm.reset();
     } catch (error) {
-        setStatus('Failed to create note. Please try again.', 'error');
+        setStatus('Failed to create note. Please retry.', 'error');
     } finally {
         setLoading(false);
     }
