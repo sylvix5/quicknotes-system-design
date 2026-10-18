@@ -192,7 +192,7 @@ async function deleteNote(id, listItemEl) {
     try {
         await request(`${API_URL}/${id}`, { method: 'DELETE' });
         listItemEl.remove();
-        setStatus(`Note ${id} deleted successfully (simulated API).`, 'success');
+        setStatus(`Note ${id} has been deleted successfully (simulated API).`, 'success');
 
         if (notesList.children.length === 0) {
             renderNotes([]);
